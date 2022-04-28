@@ -1,10 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { colors } from '../Styles/Colors'
 
-const Item = ({item}) => {
+const Item = ({item, onPress}) => {
   return (
     <View style = {styles.itemContainer}>
-      <Text style = {styles.text}>{item.todo}</Text>
+      <TouchableOpacity onPress={()=>onPress(item.id)}>
+        <Text style = {styles.text}>{item.todo}</Text>
+      </TouchableOpacity>
     </View>
   )
 }
