@@ -27,6 +27,7 @@ const Layout = () => {
   const handleDelete = () => {
     const todosFiltrados = todoList.filter(item => item.id !== idSelected)
     setTodoList(todosFiltrados)
+    setModalVisible(false)
   }
   
 
@@ -118,6 +119,6 @@ const styles = StyleSheet.create({
     width: '90%',
   },
   textContainer: {
-    Color: colors.white,  
+    color: colors.white,  
   },
 })
